@@ -27,7 +27,7 @@ jobs:
     - name: Check directories
       run: |
         ls
-        sleep 7m
+        sleep 10m
   
     - name: run UI Tests
       run: |
