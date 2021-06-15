@@ -20,16 +20,16 @@ jobs:
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
 
-    - uses: actions/checkout@v2
-      with:
-        repository: testacc-art/gha-uitests-synthetize
-        ref: build-upon-passing
-    - name: Check directories
-      run: sleep 100
+#     - uses: actions/checkout@v2
+#       with:
+#         repository: testacc-art/gha-uitests-synthetize
+#         ref: build-upon-passing
+#     - name: Check directories
+#       run: sleep 100
   
-    - name: run UI Tests
-      run: |
-        xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
+#     - name: run UI Tests
+#       run: |
+#         xcodebuild clean -scheme "AccessibilityElementAdaptor UI Tests" -configuration "UI Testing" test
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v2
       timeout-minutes: 25
