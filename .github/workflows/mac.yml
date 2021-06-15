@@ -25,9 +25,7 @@ jobs:
         repository: testacc-art/gha-uitests-synthetize
         ref: build-upon-passing
     - name: Check directories
-      run: |
-        ls
-        sleep 10m
+      run: sleep 100
   
     - name: run UI Tests
       run: |
